@@ -64,7 +64,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [zackhhi@gmail.com]
+Your Name - zackhhi@gmail.com
 
-Project Link: [https://github.com/your_username_/Project-Name](https://github.com/eftpmc/ward)
+Project Link: [https://github.com/eftpmc/ward](https://github.com/eftpmc/ward)
 
