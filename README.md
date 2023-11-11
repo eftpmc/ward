@@ -31,7 +31,7 @@ To get a local copy up and running, follow these simple steps.
 ### Installation
 
 1. Clone the repo
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/eftpmc/ward.git
 2. Install NPM packages
    npm install
 
@@ -46,7 +46,7 @@ This app is great for individuals looking to streamline their wardrobe managemen
 - [ ] Add user authentication and profile management
 - [ ] Expand the database to include a wider range of clothing styles
 
-See the [open issues](https://github.com/your_username_/Project-Name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/eftpmc/ward/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -64,7 +64,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [Your Email]
+Your Name - [zackhhi@gmail.com]
 
-Project Link: [https://github.com/your_username_/Project-Name](https://github.com/your_username_/Project-Name)
+Project Link: [https://github.com/your_username_/Project-Name](https://github.com/eftpmc/ward)
 
