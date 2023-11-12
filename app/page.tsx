@@ -1,4 +1,5 @@
 import UniversalButton from '../components/UniversalButton'
+import AddButton from '../components/AddButton'
 import AuthButton from '../components/AuthButton'
 import { createClient } from '@/utils/supabase/server'
 import WelcomeScreen from '@/components/WelcomeScreen'
@@ -13,7 +14,7 @@ export default async function Index() {
     try {
       const supabase = createClient(cookieStore)
       const { data, error } = await supabase.auth.getSession()
-  
+
       // Check if there's a session and no error
       if (data.session && !error) {
         return true;
@@ -24,7 +25,7 @@ export default async function Index() {
       console.error("Error initializing Supabase client:", e);
       return false;
     }
-  }  
+  }
 
   const isAuth = canInitSupabaseClient()
 
@@ -32,14 +33,25 @@ export default async function Index() {
     <div className="flex-1 w-full flex flex-col gap-20 items-center">
       <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
         <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-          <UniversalButton
-            text="Home"
-            href="/"
-            ariaLabel="Navigate to Home"
-          />
-          <AuthButton />
+          <div className="flex items-center gap-4">
+            <UniversalButton
+              text="Home"
+              href="/"
+              ariaLabel="Navigate to Home"
+            />
+            <UniversalButton
+              text="Wardrobe"
+              href="/"
+              ariaLabel="Navigate to Wardrobe"
+            />
+            <AddButton />
+          </div>
+          <div>
+            <AuthButton />
+          </div>
         </div>
       </nav>
+
 
       <div className="animate-in flex-1 flex flex-col gap-20 opacity-0 max-w-4xl px-3">
         {await isAuth ? null : <Header />}
