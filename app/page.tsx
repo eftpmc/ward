@@ -2,7 +2,7 @@ import UniversalButton from '../components/UniversalButton'
 import AuthButton from '../components/AuthButton'
 import { createClient } from '@/utils/supabase/server'
 import WelcomeScreen from '@/components/WelcomeScreen'
-import SignUpUserSteps from '@/components/SignUpUserSteps'
+import Wardrobe from '@/components/Wardrobe'
 import Header from '@/components/Header'
 import { cookies } from 'next/headers'
 
@@ -42,10 +42,9 @@ export default async function Index() {
       </nav>
 
       <div className="animate-in flex-1 flex flex-col gap-20 opacity-0 max-w-4xl px-3">
-        <Header />
+        {await isAuth ? null : <Header />}
         <main className="flex-1 flex flex-col gap-6">
-          {/* <h2 className="font-bold text-4xl mb-4">Next steps</h2> */}
-          {await isAuth ? <SignUpUserSteps /> : <WelcomeScreen />}
+          {await isAuth ? <Wardrobe /> : <WelcomeScreen />}
         </main>
       </div>
 
